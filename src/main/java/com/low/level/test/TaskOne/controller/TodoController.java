@@ -16,6 +16,10 @@ public class TodoController {
     public TodoController(ItemService itemService) {
         this.itemService = itemService;
     }
+    @GetMapping("/greetUser")
+    public String greeting(){
+        return "Hello, welcome";
+    }
 
     @GetMapping("/getTodoList")
     public List<Item> getAllItems() {
